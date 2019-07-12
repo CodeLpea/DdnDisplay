@@ -12,6 +12,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ import com.example.lp.ddndisplay.BroadcastReceiver.NetBroadcastReceiver;
 
 import static com.example.lp.ddndisplay.Utils.Config.BASEINFOURL;
 import static com.example.lp.ddndisplay.Utils.Config.BASEURL;
+import static com.example.lp.ddndisplay.Utils.Config.TEST;
 
 public class MainActivity extends BaseActivity implements NetBroadcastReceiver.NetEvevt{
     private static final String TAG="MainActivity";
@@ -72,11 +74,21 @@ public class MainActivity extends BaseActivity implements NetBroadcastReceiver.N
  * 设置WebView
  * */
     private void setWebView() {
+        // 设置WebView属性，能够执行JavaScript脚本
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        // 设置可以支持缩放
+        mWebView.getSettings().setSupportZoom(true);
+        // 设置出现缩放工具
+        mWebView.getSettings().setBuiltInZoomControls(true);
+        // 为图片添加放大缩小功能
+        mWebView.getSettings().setUseWideViewPort(true);
+
+        mWebView.setInitialScale(10);   //100代表不缩放
+        //mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         //资源加载超时操作
         mWebView.getSettings().setAllowFileAccess(true);
         mWebView.getSettings().setDomStorageEnabled(true);
+
         mWebView.setWebViewClient(mWebWiewClient);
         mWebView.setWebChromeClient(new WebChromeClient(){
             @Override
@@ -97,7 +109,7 @@ public class MainActivity extends BaseActivity implements NetBroadcastReceiver.N
                 mWebView.reload();
             }
         });
-
+        mSwipeRefreshLayout.setRefreshing(true);
         mWebView.loadUrl(BASEURL);
         Log.i(TAG, "loadUrl: "+BASEURL);
 
