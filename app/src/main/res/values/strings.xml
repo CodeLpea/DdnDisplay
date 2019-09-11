@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">DdnDisplay</string>
+    <string name="app_name">北大公学开心榜单</string>
+    <string name="base_app_name">谛达诺信息看板</string>
+    <string name="other_app_name">学校信息看板</string>
 </resources>
