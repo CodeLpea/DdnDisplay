@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">北大公学开心榜单</string>
     <string name="base_app_name">谛达诺信息看板</string>
-    <string name="other_app_name">学校信息看板</string>
+    <string name="data_app_name">合源幼儿园信息看板</string>
+    <string name="happy_app_name">合源幼儿园开心榜单</string>
 </resources>

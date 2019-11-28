@@ -21,6 +21,11 @@ public interface Config {
 
 
 
+     /*成都市高新区合源幼儿园*/
+     String GAO_XING_HEYUAN_HAPPY="http://css.didano.cn/bigData/happy.html#/?id=560";
+     String GAO_XING_HEYUAN_DATA="http://css.didano.cn/bigData/school.html#/?id=560";
+
+
 
 
 
