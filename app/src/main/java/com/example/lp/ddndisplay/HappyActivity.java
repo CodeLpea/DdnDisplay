@@ -3,7 +3,7 @@ package com.example.lp.ddndisplay;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import static com.example.lp.ddndisplay.Utils.Config.GAO_XING_HEYUAN_HAPPY;
+import static com.example.lp.ddndisplay.Utils.Config.HAPPY_URL;
 
 public class HappyActivity extends BaseActivity {
 
@@ -11,6 +11,6 @@ public class HappyActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_happy);
-        reLoad(GAO_XING_HEYUAN_HAPPY);
+        reLoad(HAPPY_URL);
     }
 }

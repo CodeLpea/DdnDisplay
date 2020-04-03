@@ -27,9 +27,8 @@ import com.tencent.smtt.sdk.WebViewClient;
 
 import java.util.ArrayList;
 
-import static com.example.lp.ddndisplay.Utils.Config.BEIDAGOGNXUE;
-import static com.example.lp.ddndisplay.Utils.Config.GAO_XING_HEYUAN_DATA;
-import static com.example.lp.ddndisplay.Utils.Config.GAO_XING_HEYUAN_HAPPY;
+
+import static com.example.lp.ddndisplay.Utils.Config.index;
 import static com.example.lp.ddndisplay.Utils.NavigationBarUtil.hideNavigationBar;
 
 public class BaseActivity extends PermissionActivity implements NetBroadcastReceiver.NetEvevt {
@@ -56,7 +55,7 @@ public class BaseActivity extends PermissionActivity implements NetBroadcastRece
     private class PermisonListener implements PermissionsResultListener {
         @Override
         public void onPermissionGranted() {
-            reLoad(GAO_XING_HEYUAN_HAPPY);
+            reLoad(index);
         }
 
         @Override
@@ -212,7 +211,7 @@ public class BaseActivity extends PermissionActivity implements NetBroadcastRece
             @Override
             public void onRefresh() {
                 //重新刷新页面
-                mWebView.setVisibility(View.GONE);
+//                mWebView.setVisibility(View.GONE);
                 mWebView.reload();
             }
         });

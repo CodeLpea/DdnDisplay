@@ -21,9 +21,8 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
-        android:theme="@style/AppTheme"
-        android:screenOrientation="landscape">
-
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme">
         <receiver
             android:name=".Utils.appstart.AppRebootBroadCastReceiver"
             android:enabled="true">
@@ -40,26 +39,31 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".DataWatchActivity"
-            android:icon="@mipmap/icon"
-            android:label="@string/data_app_name"
-            android:screenOrientation="landscape"
-            android:launchMode="singleInstance">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <!-- <activity android:name=".DataWatchActivity" -->
+        <!-- android:icon="@mipmap/icon" -->
+        <!-- android:label="@string/base_app_name" -->
+        <!-- android:screenOrientation="landscape" -->
+        <!-- android:launchMode="singleInstance"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
 
-        <activity android:name=".HappyActivity"
+        <activity
+            android:name=".HappyActivity"
             android:icon="@mipmap/parentsicon"
             android:label="@string/happy_app_name"
-            android:screenOrientation="landscape"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

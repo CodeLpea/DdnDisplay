@@ -6,6 +6,7 @@ public interface Config {
     /**
      * 地址相关
      * */
+     String index="http://css.didano.cn/bigData/index.html#/";
      String SCHOOLNUMBER="82";
      String BASEURL ="http://css.didano.cn/bigData/index.html#/";
      String BASEURLNOVIODO ="http://css.didano.cn/bigData/index.html#/happy?id=82";
@@ -22,8 +23,8 @@ public interface Config {
 
 
      /*成都市高新区合源幼儿园*/
-     String GAO_XING_HEYUAN_HAPPY="http://css.didano.cn/bigData/happy.html#/?id=560";
-     String GAO_XING_HEYUAN_DATA="http://css.didano.cn/bigData/school.html#/?id=560";
+     String HAPPY_URL="http://css.didano.cn/bigData/happy.html#/?id=646";
+     String DATA_URL="http://css.didano.cn/bigData/school.html#/?id=646";
 
 
 
