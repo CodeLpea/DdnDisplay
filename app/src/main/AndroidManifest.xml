@@ -21,6 +21,8 @@
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
+        android:icon="@mipmap/parentsicon"
+        android:label="@string/happy_app_name"
         android:screenOrientation="landscape"
         android:theme="@style/AppTheme">
         <receiver
@@ -52,12 +54,12 @@
 
         <activity
             android:name=".HappyActivity"
-            android:icon="@mipmap/parentsicon"
-            android:label="@string/happy_app_name"
+
             android:launchMode="singleInstance"
             android:screenOrientation="landscape">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

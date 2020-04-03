@@ -11,11 +11,13 @@ import com.tencent.smtt.sdk.QbSdk;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG="MainActivity";
     private Context context;
+    public static boolean x5CoreResult = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context=this;
+        startWeb(x5CoreResult);
         initTbs();
     }
 
@@ -29,9 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 //x5內核初始化完成的回调，为true表示x5内核加载成功，否则表示x5内核加载失败，会自动切换到系统内核。
                 Log.d(TAG, " onViewInitFinished is " + arg0);
-                Intent intent=new Intent(context,HappyActivity.class);
-                startActivity(intent);
-                finish();
+                x5CoreResult = arg0;
+                startWeb(x5CoreResult);
             }
 
             @Override
@@ -42,5 +43,14 @@ public class MainActivity extends AppCompatActivity {
         };
         //x5内核初始化接口
         QbSdk.initX5Environment(getApplicationContext(),  cb);
+    }
+
+    private void startWeb(boolean x5CoreResult) {
+        //初始化x5内核
+        if (x5CoreResult) {
+            Intent intent=new Intent(context,HappyActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }
