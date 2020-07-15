@@ -3,4 +3,6 @@
     <string name="base_app_name">谛达诺信息看板</string>
     <string name="data_app_name">合源幼儿园信息看板</string>
     <string name="happy_app_name">开心榜单</string>
+    <string name="name_happy">开心榜单</string>
+    <string name="name_data">数据看板</string>
 </resources>

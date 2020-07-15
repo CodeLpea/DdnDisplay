@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.lp.ddndisplay.ddninfo"
+        applicationId "com.example.lp.ddndisplay.happy"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -15,7 +15,7 @@ android {
          * 兼容X5
          */
         ndk {
-            abiFilters "armeabi"
+            abiFilters 'armeabi','armeabi-v7a'
         }
     }
     buildTypes {
